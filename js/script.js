@@ -45,6 +45,26 @@ const ourTeam = [
 ]
 console.log('array contenente gli oggetti:',ourTeam);
 
-//stampo le 
+//stampo l'array sull' html 
+
+let html = ''; //stringa vuota
+//adesso con un ciclo for leggo tutti soggetti che fanno parte del ourTeam con i relativi contenuti(objects dell'array)
+for(let i = 0; i<ourTeam.length; i++){
+  //ogni singolo soggetto del team è uguale a ourTeam[i]
+  const elementOurTeam = ourTeam[i];
+  console.log('soggetto:',elementOurTeam);
 
 
+}
+
+
+
+
+
+
+
+
+
+
+//stampo l'html generato
+//document.getElementById('output').innerHTML = html;
