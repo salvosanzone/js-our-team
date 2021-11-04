@@ -17,28 +17,28 @@ const ourTeam = [
     foto: 'img/wayne-barnett-founder-ceo.jpg'
   },
   {
-    nome: 'Wayne Barnett',
-    ruolo: 'Founder & CEO',
+    nome: 'Angela Caroll',
+    ruolo: 'Chief editor',
+    foto: 'img/angela-caroll-chief-editor.jpg'
+  },
+  {
+    nome: 'Walter Gordon',
+    ruolo: 'Office Manager',
     foto: 'img/wayne-barnett-founder-ceo.jpg'
   },
   {
-    nome: 'Wayne Barnett',
-    ruolo: 'Founder & CEO',
+    nome: 'Angela Lopez',
+    ruolo: 'Social Media Manager',
     foto: 'img/wayne-barnett-founder-ceo.jpg'
   },
   {
-    nome: 'Wayne Barnett',
-    ruolo: 'Founder & CEO',
+    nome: 'Scott Estrada',
+    ruolo: 'Developer',
     foto: 'img/wayne-barnett-founder-ceo.jpg'
   },
   {
-    nome: 'Wayne Barnett',
-    ruolo: 'Founder & CEO',
-    foto: 'img/wayne-barnett-founder-ceo.jpg'
-  },
-  {
-    nome: 'Wayne Barnett',
-    ruolo: 'Founder & CEO',
+    nome: 'Barbara Ramos',
+    ruolo: 'Graphic Designer',
     foto: 'img/wayne-barnett-founder-ceo.jpg'
   },
   
@@ -57,11 +57,52 @@ for(let i = 0; i<ourTeam.length; i++){
   //uso un ciclo for in
   for(let i in elementOurTeam){
     //genero l'html 
-    html += `
+    html = `
+    <div>
+      <img
+      src="img/wayne-barnett-founder-ceo.jpg"
+      />
+      <h3>Wayne Barnett</h3>
+      <p>Founder & CEO</p>
+    </div>
+    <div>
+      <img
+      src="img/wayne-barnett-founder-ceo.jpg"
+      />
+      <h3>Wayne Barnett</h3>
+      <p>Founder & CEO</p>
+    </div>
+    <div>
+      <img
+      src="img/wayne-barnett-founder-ceo.jpg"
+      />
+      <h3>Wayne Barnett</h3>
+      <p>Founder & CEO</p>
+    </div>
+    <div>
+      <img
+      src="img/wayne-barnett-founder-ceo.jpg"
+      />
+      <h3>Wayne Barnett</h3>
+      <p>Founder & CEO</p>
+    </div>
+    <div>
+      <img
+      src="img/wayne-barnett-founder-ceo.jpg"
+      />
+      <h3>Wayne Barnett</h3>
+      <p>Founder & CEO</p>
+    </div>
+    <div>
+      <img
+      src="img/wayne-barnett-founder-ceo.jpg"
+      />
+      <h3>Wayne Barnett</h3>
+      <p>Founder & CEO</p>
+    </div>
+  
     
-    <img src="img/wayne-barnett-founder-ceo.jpg"/>
-    <h3>Wayne Barnett</h3>
-    <p>Founder & CEO</p>
+  
     
     
     
