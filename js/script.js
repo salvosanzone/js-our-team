@@ -54,11 +54,29 @@ for(let i = 0; i<ourTeam.length; i++){
   const elementOurTeam = ourTeam[i];
   console.log('soggetto:',elementOurTeam);
 
+  //uso un ciclo for in
+  for(let i in elementOurTeam){
+    //genero l'html 
+    html += `
+    
+    <img src="img/wayne-barnett-founder-ceo.jpg"/>
+    <h3>Wayne Barnett</h3>
+    <p>Founder & CEO</p>
+    
+    
+    
+    
+    
+    
+    
+    `;
+    
+  }
 
 }
 
 
-
+console.log(html);
 
 
 
@@ -67,4 +85,4 @@ for(let i = 0; i<ourTeam.length; i++){
 
 
 //stampo l'html generato
-//document.getElementById('output').innerHTML = html;
+document.getElementById('output').innerHTML = html;
