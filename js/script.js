@@ -9,121 +9,95 @@
  */
 
 //creo un array al cui interno ci saranno tanti oggetti tanto quanti saranno gli elementi del nostro: 'our team'
-
+//lui l ha chiamata item
 const ourTeam = [
   {
     nome: 'Wayne Barnett',
     ruolo: 'Founder & CEO',
-    foto: 'img/wayne-barnett-founder-ceo.jpg'
+    foto: 'src="img/wayne-barnett-founder-ceo.jpg"'
+  
+   
   },
   {
-    nome: 'Angela Caroll',
-    ruolo: 'Chief editor',
-    foto: 'img/angela-caroll-chief-editor.jpg'
+    nome: 'Wayne Barnett',
+    ruolo: 'Founder & CEO',
+    foto: 'src="img/wayne-barnett-founder-ceo.jpg"'
+  
+   
   },
   {
-    nome: 'Walter Gordon',
-    ruolo: 'Office Manager',
-    foto: 'img/wayne-barnett-founder-ceo.jpg'
+    nome: 'Wayne Barnett',
+    ruolo: 'Founder & CEO',
+    foto: 'src="img/wayne-barnett-founder-ceo.jpg"'
+  
+   
   },
   {
-    nome: 'Angela Lopez',
-    ruolo: 'Social Media Manager',
-    foto: 'img/wayne-barnett-founder-ceo.jpg'
+    nome: 'Wayne Barnett',
+    ruolo: 'Founder & CEO',
+    foto: 'src="img/wayne-barnett-founder-ceo.jpg"'
+  
+   
   },
   {
-    nome: 'Scott Estrada',
-    ruolo: 'Developer',
-    foto: 'img/wayne-barnett-founder-ceo.jpg'
+    nome: 'Wayne Barnett',
+    ruolo: 'Founder & CEO',
+    foto: 'src="img/wayne-barnett-founder-ceo.jpg"'
+  
+   
   },
   {
-    nome: 'Barbara Ramos',
-    ruolo: 'Graphic Designer',
-    foto: 'img/wayne-barnett-founder-ceo.jpg'
+    nome: 'Wayne Barnett',
+    ruolo: 'Founder & CEO',
+    foto: 'src="img/wayne-barnett-founder-ceo.jpg"'
+  
+   
   },
+ 
   
 ]
 console.log('array contenente gli oggetti:',ourTeam);
 
-//stampo l'array sull' html 
+//recupero il contenitore
+const container = document.querySelector('.team-container');
+//ripulisco html
+container.innerHTML = '';
 
-let html = ''; //stringa vuota
-//adesso con un ciclo for leggo tutti soggetti che fanno parte del ourTeam con i relativi contenuti(objects dell'array)
-for(let i = 0; i<ourTeam.length; i++){
-  //ogni singolo soggetto del team è uguale a ourTeam[i]
-  const elementOurTeam = ourTeam[i];
-  console.log('soggetto:',elementOurTeam);
+//reiteriamo per tutti gli elementi presenti all'intero di ourTeam
 
-  //uso un ciclo for in
-  for(let i in elementOurTeam){
-    //genero l'html 
-    html = `
-    <div>
-      <img
-      src="img/wayne-barnett-founder-ceo.jpg"
-      />
-      <h3>Wayne Barnett</h3>
-      <p>Founder & CEO</p>
-    </div>
-    <div>
-      <img
-      src="img/wayne-barnett-founder-ceo.jpg"
-      />
-      <h3>Wayne Barnett</h3>
-      <p>Founder & CEO</p>
-    </div>
-    <div>
-      <img
-      src="img/wayne-barnett-founder-ceo.jpg"
-      />
-      <h3>Wayne Barnett</h3>
-      <p>Founder & CEO</p>
-    </div>
-    <div>
-      <img
-      src="img/wayne-barnett-founder-ceo.jpg"
-      />
-      <h3>Wayne Barnett</h3>
-      <p>Founder & CEO</p>
-    </div>
-    <div>
-      <img
-      src="img/wayne-barnett-founder-ceo.jpg"
-      />
-      <h3>Wayne Barnett</h3>
-      <p>Founder & CEO</p>
-    </div>
-    <div>
-      <img
-      src="img/wayne-barnett-founder-ceo.jpg"
-      />
-      <h3>Wayne Barnett</h3>
-      <p>Founder & CEO</p>
-    </div>
+for(let i = 0; i < ourTeam.length; i++){
+  console.log('iterazione:',i);
+  //creo una card per ogni elemento
+  const card = document.createElement('div');
+  //richiamo la classe dal css
+  card.className = 'team-card';
+
+
+  //genero l'html che poi stamperò 
+  card.innerHTML = `
+
+  <div class="card-image">
+    <img
+      src"${ourTeam[i].foto}"
+      alt="Wayne Barnett"
+    />
+  <div>
+  <div class="card-text">
+    <h3>${ourTeam[i].nome}</h3>
+    <p>${ourTeam[i].ruolo}</p>
+  </div>
   
-    
-  
-    
-    
-    
-    
-    
-    
-    
-    `;
-    
-  }
+  `;
+  //appendo al container la card
+  container.append(card);
+
+
 
 }
 
 
-console.log(html);
 
 
 
 
 
-
-
-//stampo l'html generato
-document.getElementById('output').innerHTML = html;
